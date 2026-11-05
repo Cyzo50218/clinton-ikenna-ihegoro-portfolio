@@ -1,0 +1,23 @@
+/* Native Appearance > Menus store navigation */
+.main-nav .menu{display:flex;align-items:center;gap:29px;list-style:none;margin:0;padding:0}
+.main-nav .menu li{margin:0;padding:0}
+.main-nav .menu a{display:block;font-size:12px;font-weight:700;letter-spacing:.005em}
+.main-nav .menu .current-menu-item a,.main-nav .menu .current-product_cat-ancestor a{color:var(--accent)}
+@media(max-width:1050px) and (min-width:761px){.main-nav .menu{gap:15px}}
+@media(max-width:760px){.main-nav .menu{width:100%;display:flex;flex-direction:column;align-items:stretch;gap:0}.main-nav .menu a{padding:12px 0;font-size:15px;border-bottom:1px solid var(--line)}}
+/* Keep product photographs visible even before WooCommerce gallery JS finishes. */
+.woocommerce div.product div.images.woocommerce-product-gallery{opacity:1!important}
+.woocommerce div.product div.images.woocommerce-product-gallery img{display:block}
+@media(max-width:760px){
+ .hero-grid{grid-template-columns:minmax(0,1fr)}
+ .hero-copy,.hero-photo{min-width:0;max-width:100%}
+ .header-inner{grid-template-columns:minmax(30px,1fr) auto minmax(80px,1fr)}
+ .header-tools{min-width:0;justify-self:end}
+ .header-tools a,.search-toggle{flex-shrink:0}
+}
+@media(max-width:440px){
+ .header-inner{grid-template-columns:minmax(24px,1fr) auto minmax(78px,1fr)}
+ .hero-copy{overflow-wrap:break-word}
+ .hero-photo{width:calc(100% + 34px);max-width:none}
+}
+.shop-filterbar{display:flex;align-items:end;flex-wrap:wrap;gap:12px;background:#F4EAEC;border:1px solid #EADCE1;margin:0 0 33px;padding:16px 18px}.shop-filterbar label{display:flex;flex-direction:column;gap:5px;font-size:10px;color:#77656B;text-transform:uppercase;letter-spacing:.055em;font-weight:700}.shop-filterbar input[type=number]{background:white;border:1px solid #E2D4D9;width:125px;height:42px;padding:10px;font-size:13px;color:#4F3440}.shop-filterbar .stock-only{align-self:center;flex-direction:row;align-items:center;gap:8px;font-size:11px;letter-spacing:0;text-transform:none;color:#6A4A58}.shop-filterbar input[type=checkbox]{accent-color:#782E45}.shop-filterbar .btn{padding:10px 17px;min-height:42px;font-size:10px}.clear-filters{align-self:center;border-bottom:1px solid #A38A94;font-size:11px;margin:0 6px}.woocommerce ul.products li.product.outofstock>a:first-child{opacity:.7}@media(max-width:580px){.shop-filterbar{padding:14px;gap:10px}.shop-filterbar label:not(.stock-only){flex:1;min-width:calc(50% - 10px)}.shop-filterbar input[type=number]{width:100%}.shop-filterbar .stock-only{width:100%}.shop-filterbar .btn{flex:1}}

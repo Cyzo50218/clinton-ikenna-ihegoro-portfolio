@@ -1,0 +1,141 @@
+/*
+ * FORMA v1.3.5: smaller and lighter promotion + minimal hero dots.
+ * The campaign pagination buttons are real controls, not decoration.
+ */
+.atelier-announcement__row {
+  min-height:49px;
+  padding-top:10px;
+  padding-bottom:4px;
+}
+.atelier-announcement__note {
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.045em;
+}
+.atelier-announcement__promo {
+  font-size:10px;
+  font-weight:550;
+  letter-spacing:.04em;
+  gap:10px;
+  transform:translateY(2px);
+}
+.atelier-announcement__promo span {
+  padding:5px 9px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.025em;
+}
+.atelier-announcement__row>a {
+  font-size:9px;
+  font-weight:550;
+  letter-spacing:.035em;
+  transform:translateY(2px);
+}
+body.home .atelier-hero {
+  position:relative;
+  min-height:625px;
+}
+body.home .atelier-hero__layout {
+  min-height:625px;
+}
+body.home .atelier-hero__pagination {
+  position:absolute;
+  z-index:5;
+  bottom:27px;
+  /* Use the same centered 1240px grid as the header navigation. */
+  left:0;
+  right:0;
+  width:min(var(--container),calc(100% - 64px));
+  box-sizing:border-box;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:7px;
+  padding:0;
+  margin:0 auto;
+}
+body.home .atelier-hero__dot {
+  -webkit-appearance:none;
+  appearance:none;
+  display:grid;
+  place-items:center;
+  flex:0 0 24px;
+  width:24px;
+  height:24px;
+  border:0;
+  border-radius:0;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+  box-shadow:none;
+}
+body.home .atelier-hero__dot::before {
+  content:"";
+  display:block;
+  width:10px;
+  height:10px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:none;
+  transition:background-color .25s ease,transform .25s ease;
+}
+body.home .atelier-hero__dot.is-active::before,
+body.home .atelier-hero__dot[aria-pressed="true"]::before {
+  background:#151013;
+}
+body.home .atelier-hero__dot:hover::before {
+  transform:scale(1.18);
+}
+body.home .atelier-hero__dot:focus-visible {
+  outline:2px solid #fff;
+  outline-offset:1px;
+  border-radius:2px;
+}
+/* Match the header's responsive .container margins at each breakpoint. */
+@media(max-width:1050px){
+ body.home .atelier-hero__pagination{width:calc(100% - 48px)}
+}
+/* Keep the centered campaign title inside narrow mobile viewports. */
+@media(max-width:900px) {
+ body.home .atelier-hero__layout{min-height:560px}
+}
+@media(max-width:760px) {
+ body.home .atelier-hero__pagination{width:calc(100% - 34px)}
+ .atelier-announcement__row{
+   min-height:49px;
+   padding-top:9px;
+   padding-bottom:5px;
+ }
+ .atelier-announcement__promo{
+   font-size:10px;
+   font-weight:520;
+   letter-spacing:.01em;
+   gap:8px;
+ }
+ .atelier-announcement__promo span{font-size:9px;font-weight:600;padding:5px 7px}
+}
+@media(max-width:650px) {
+ body.home .atelier-hero {min-height:0}
+ body.home .atelier-hero__layout {min-height:495px}
+ body.home .atelier-hero__pagination {left:0;right:0;bottom:16px;gap:6px;margin-inline:auto}
+ body.home .atelier-hero__dot {width:24px;height:24px;flex-basis:24px}
+ body.home .atelier-hero h1 {
+   font-size:clamp(38px,9.2vw,51px);
+   max-width:calc(100vw - 46px);
+ }
+ body.home .atelier-hero__copy {
+   box-sizing:border-box;
+   min-width:0;
+   max-width:calc(100vw - 38px);
+ }
+}
+@media(max-width:375px) {
+ .atelier-announcement__promo{font-size:9px;gap:6px}
+ .atelier-announcement__promo span{font-size:8.5px;padding:5px}
+ body.home .atelier-hero__layout{min-height:450px}
+ body.home .atelier-hero h1{font-size:36px}
+}
+@media(prefers-reduced-motion:reduce) {
+ body.home .atelier-hero__dot::before {transition:none}
+}

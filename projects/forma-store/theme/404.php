@@ -1,0 +1,1 @@
+<?php get_header(); ?><main id="main" class="container not-found"><p class="eyebrow">404 / Nothing here</p><h1>That page isn't on our shelf.</h1><p>Head back to the collection.</p><a class="btn" href="<?php echo esc_url(home_url('/shop/')); ?>">Shop all ↗</a></main><?php get_footer(); ?>

@@ -1,0 +1,54 @@
+/*
+ * FORMA 1.3.11 — Bodoni Moda, luxury fashion editorial typography.
+ * Bundled locally under the SIL Open Font License.
+ */
+@font-face {
+  font-family: 'FORMA Bodoni Moda';
+  src: url('./fonts/bodoni-moda-latin-variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+/* One-line editorial headline without the geometric Jost styling. */
+body.home .atelier-hero h1 {
+  font-family: 'FORMA Bodoni Moda','Bodoni MT','Didot','Times New Roman',serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: clamp(32px, 4.45vw, 65px);
+  letter-spacing: -.035em;
+  line-height: 1.18;
+  white-space: nowrap;
+  text-transform: none;
+  max-width: none;
+  overflow-wrap: normal;
+  word-break: normal;
+  margin-bottom: 28px;
+}
+/* Matching editorial headings create a deliberate, cohesive boutique feel. */
+body.home .atelier-section-head h2,
+body.home .atelier-editorial__text h2,
+body.home .atelier-campaign__content h2,
+body.home .atelier-category-name strong,
+body.home .atelier-newsletter h2 {
+  font-family: 'FORMA Bodoni Moda','Bodoni MT','Didot','Times New Roman',serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  letter-spacing: -.055em;
+}
+@media (max-width: 900px) {
+  body.home .atelier-hero h1 {
+    font-size: clamp(24px, 4.15vw, 40px);
+  }
+}
+@media (max-width: 650px) {
+  body.home .atelier-hero h1 {
+    font-size: clamp(17px, 4.45vw, 22px);
+    letter-spacing: -.04em;
+    max-width: calc(100vw - 36px);
+  }
+}
+@media (max-width: 370px) {
+  body.home .atelier-hero h1 {
+    font-size: clamp(16px, 4.45vw, 18px);
+  }
+}

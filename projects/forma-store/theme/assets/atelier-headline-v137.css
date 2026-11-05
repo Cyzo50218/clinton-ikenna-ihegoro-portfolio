@@ -1,0 +1,81 @@
+/* FORMA v1.3.7: user-selected hero title and understated transparent CTA. */
+body.home .atelier-hero__copy{
+ max-width:min(1100px, calc(100vw - 34px));
+}
+body.home .atelier-hero h1{
+ display:block;
+ width:max-content;
+ max-width:none;
+ margin:0 auto 30px;
+ white-space:nowrap;
+ overflow-wrap:normal;
+ word-break:normal;
+ hyphens:none;
+ text-align:center;
+ font-family:Georgia,'Times New Roman',serif;
+ font-size:clamp(29px,4.35vw,64px);
+ line-height:1.15;
+ letter-spacing:-.045em;
+ font-weight:400;
+ text-transform:none;
+}
+body.home .atelier-hero__button{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ min-width:195px;
+ min-height:51px;
+ padding:15px 27px;
+ background:transparent;
+ background-color:transparent;
+ color:#FFF;
+ border:0;
+ border-radius:0;
+ box-shadow:none;
+ text-align:center;
+ font-size:11px;
+ letter-spacing:.11em;
+ font-weight:750;
+ transition:background-color .26s ease,color .26s ease;
+}
+body.home .atelier-hero__button:hover,
+body.home .atelier-hero__button:focus-visible{
+ background-color:#FFF;
+ color:#282126;
+ border:0;
+ box-shadow:none;
+ transform:none;
+}
+body.home .atelier-hero__button:focus-visible{
+ outline:2px solid #FFF;
+ outline-offset:3px;
+}
+@media(max-width:900px){
+ body.home .atelier-hero h1{
+  font-size:clamp(26px,4.2vw,38px);
+ }
+}
+@media(max-width:650px){
+ body.home .atelier-hero__copy{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+ }
+ body.home .atelier-hero h1{
+  font-size:clamp(14px,4.35vw,22px);
+  letter-spacing:-.055em;
+  white-space:nowrap;
+  margin-bottom:21px;
+ }
+ body.home .atelier-hero__button{
+  min-width:165px;
+  min-height:47px;
+  font-size:10px;
+ }
+}
+@media(max-width:370px){
+ body.home .atelier-hero h1{font-size:clamp(14px,4.35vw,19px);letter-spacing:-.06em}
+}
+@media(prefers-reduced-motion:reduce){
+ body.home .atelier-hero__button{transition:none}
+}

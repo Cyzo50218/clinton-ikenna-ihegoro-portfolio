@@ -1,0 +1,79 @@
+/* FORMA v3.2 — homepage-only transparent-to-solid scrolling header.
+ * Header content remains fully opaque; only its background fades.
+ * Inner WordPress and WooCommerce pages retain their readable white header.
+ */
+body.home .atelier-header{
+  background-color:rgba(255,255,255,0);
+  border-bottom-color:transparent;
+  box-shadow:none;
+  transition:background-color .38s cubic-bezier(.22,.61,.36,1),
+             border-color .38s ease,box-shadow .38s ease;
+}
+body.home .atelier-hero{
+  margin-top:-70px;
+}
+/* Soft shade over the image directly behind white navigation and icons. */
+body.home .atelier-hero::after{
+  content:"";pointer-events:none;position:absolute;
+  z-index:1;left:0;right:0;top:0;height:120px;
+  background:linear-gradient(to bottom,rgba(25,18,24,.37),rgba(25,18,24,0));
+}
+body.home .atelier-header .atelier-navigation a,
+body.home .atelier-header .atelier-header__logo,
+body.home .atelier-header .atelier-header__logo span,
+body.home .atelier-header .atelier-icon-button,
+body.home .atelier-header .atelier-header__right .header-cart,
+body.home .atelier-header .atelier-menu-toggle{
+  color:#FFF;
+  transition:color .36s ease;
+}
+body.home .atelier-header .atelier-navigation a:hover,
+body.home .atelier-header .atelier-header__right .atelier-icon-button:hover,
+body.home .atelier-header .atelier-header__right .header-cart:hover,
+body.home .atelier-header .atelier-menu-toggle:hover{
+  color:#F4CFDA;
+}
+/* White background and dark controls when scrolling, searching, or navigating. */
+body.home .atelier-header.is-solid{
+  background-color:rgba(255,255,255,1);
+  border-bottom-color:#ECE8E8;
+  box-shadow:0 3px 17px rgba(27,20,23,.065);
+}
+body.home .atelier-header.is-solid .atelier-navigation a,
+body.home .atelier-header.is-solid .atelier-header__logo,
+body.home .atelier-header.is-solid .atelier-icon-button,
+body.home .atelier-header.is-solid .atelier-header__right .header-cart,
+body.home .atelier-header.is-solid .atelier-menu-toggle{
+  color:#282126;
+}
+body.home .atelier-header.is-solid .atelier-header__logo span{
+  color:#782E45;
+}
+body.home .atelier-header.is-solid .atelier-navigation a:hover,
+body.home .atelier-header.is-solid .atelier-header__right .atelier-icon-button:hover,
+body.home .atelier-header.is-solid .atelier-header__right .header-cart:hover,
+body.home .atelier-header.is-solid .atelier-menu-toggle:hover{
+  color:#782E45;
+}
+/* Search panel always remains opaque and legible, independent of header state. */
+body.home .atelier-header .atelier-search-drawer{
+  background:#FFF;
+  color:#282126;
+}
+@media(max-width:900px){
+  body.home .atelier-hero{margin-top:-64px}
+  body.home .atelier-header .atelier-navigation.is-open a{color:#282126}
+  body.home .atelier-header .atelier-navigation.is-open a:hover{color:#782E45}
+}
+@media(max-width:650px){
+  body.home .atelier-hero{margin-top:-56px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.home .atelier-header,
+ body.home .atelier-header .atelier-navigation a,
+ body.home .atelier-header .atelier-header__logo,
+ body.home .atelier-header .atelier-header__logo span,
+ body.home .atelier-header .atelier-icon-button,
+ body.home .atelier-header .atelier-header__right .header-cart,
+ body.home .atelier-header .atelier-menu-toggle{transition:none!important}
+}

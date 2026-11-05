@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "layout": {
+      "contentSize": "880px",
+      "wideSize": "1240px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Espresso Ink",
+          "color": "#282126"
+        },
+        {
+          "slug": "accent",
+          "name": "Atelier Oxblood",
+          "color": "#782E45"
+        },
+        {
+          "slug": "porcelain",
+          "name": "Porcelain",
+          "color": "#FAF7F5"
+        },
+        {
+          "slug": "rose",
+          "name": "Soft Rose",
+          "color": "#EEDFE3"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "editorial",
+          "name": "Editorial Serif",
+          "fontFamily": "Georgia, 'Times New Roman', serif"
+        },
+        {
+          "slug": "system",
+          "name": "System Sans",
+          "fontFamily": "'Segoe UI', Arial, sans-serif"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#FAF7F5",
+      "text": "#282126"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "#782E45",
+          "text": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

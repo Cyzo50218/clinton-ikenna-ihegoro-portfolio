@@ -103,6 +103,17 @@ Work includes:
 
 [Visit TrivalRO](https://trivalro.net/)
 
+### FORMA Store
+
+**WordPress / WooCommerce Theme Development - 2026**
+
+Built a custom editorial storefront theme with PHP templates, responsive navigation, product catalog presentation, sale and stock filters, AJAX cart behavior, and a browser-local wishlist.
+
+- [FORMA Store theme source](https://github.com/Cyzo50218/clinton-ikenna-ihegoro-portfolio/tree/main/projects/forma-store)
+
+This is a local practice store. It does not process real payments or orders, and its local database and sample media are not part of the public repository.
+
+---
 ## Technical Skills
 
 ### Web Development

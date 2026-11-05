@@ -1,0 +1,39 @@
+/* FORMA v1.3.10: modern geometric typography for the homepage hero.
+ * Jost is self-hosted with its OFL license, avoiding an external font request.
+ */
+@font-face{
+  font-family:'FORMA Jost';
+  src:url('./fonts/jost-latin-variable.woff2') format('woff2');
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+}
+body.home .atelier-hero h1{
+  font-family:'FORMA Jost','Century Gothic','Trebuchet MS',Arial,sans-serif;
+  font-weight:500;
+  font-size:clamp(35px,4.8vw,69px);
+  line-height:1.13;
+  letter-spacing:-.038em;
+  text-transform:none;
+  white-space:nowrap;
+  overflow-wrap:normal;
+  hyphens:none;
+}
+@media(max-width:900px){
+  body.home .atelier-hero h1{
+    font-size:clamp(25px,4.5vw,42px);
+  }
+}
+@media(max-width:650px){
+  body.home .atelier-hero h1{
+    font-size:clamp(15px,4.85vw,22px);
+    letter-spacing:-.043em;
+    max-width:calc(100vw - 34px);
+  }
+}
+@media(max-width:370px){
+  body.home .atelier-hero h1{
+    font-size:clamp(15px,4.7vw,18px);
+    letter-spacing:-.045em;
+  }
+}

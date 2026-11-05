@@ -1,0 +1,171 @@
+/* FORMA 1.3.4
+   Stronger practice-store promotion and minimalist centered campaign copy.
+   Other WooCommerce pages keep their own page layouts.
+*/
+.atelier-announcement{
+ background:#782E45;
+ color:#fff;
+ font-size:11px;
+ letter-spacing:.04em;
+}
+.atelier-announcement__row{
+ display:grid;
+ grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+ align-items:center;
+ gap:22px;
+ min-height:50px;
+ padding-top:7px;
+ padding-bottom:7px;
+}
+.atelier-announcement__note{
+ justify-self:start;
+ white-space:nowrap;
+ color:#F5E5E9;
+ font-size:10px;
+ font-weight:700;
+ letter-spacing:.055em;
+}
+.atelier-announcement__promo{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:13px;
+ white-space:nowrap;
+ font-size:12px;
+ font-weight:800;
+ line-height:1.3;
+ letter-spacing:.07em;
+ color:#fff;
+}
+.atelier-announcement__promo span{
+ display:inline-block;
+ background:#fff;
+ color:#782E45;
+ padding:7px 11px;
+ font-size:11px;
+ font-weight:850;
+ border-radius:2px;
+}
+.atelier-announcement__row>a{
+ justify-self:end;
+ color:#fff;
+ font-size:10px;
+ font-weight:780;
+ white-space:nowrap;
+ letter-spacing:.07em;
+ text-decoration:none;
+ border-bottom:1px solid rgba(255,255,255,.65);
+ padding-bottom:3px;
+}
+.atelier-announcement__row>a:hover{color:#F6D7DF;border-color:#F6D7DF}
+
+body.home .atelier-hero__layout{
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+}
+body.home .atelier-hero__copy{
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ width:100%;
+ max-width:840px;
+ margin:0 auto;
+ padding:92px 0 72px;
+}
+body.home .atelier-hero h1{
+ color:#fff;
+ font:400 clamp(57px,6vw,89px)/1.07 Georgia,'Times New Roman',serif;
+ letter-spacing:-.05em;
+ max-width:800px;
+ margin:0 0 20px;
+ text-shadow:0 3px 17px rgba(22,16,19,.22);
+}
+body.home .atelier-hero h1 em{font-style:italic;color:#fff}
+body.home .atelier-hero__copy>p:not(.atelier-hero__eyebrow){
+ max-width:450px;
+ font-size:16px;
+ line-height:1.7;
+ text-align:center;
+ color:#fff;
+ margin:0 0 29px;
+ text-shadow:0 1px 9px rgba(10,8,9,.35);
+}
+body.home .atelier-hero__button{
+ display:inline-flex;
+ justify-content:center;
+ align-items:center;
+ min-width:215px;
+ min-height:53px;
+ padding:15px 36px;
+ border:1px solid rgba(255,255,255,.25);
+ border-radius:2px;
+ background:#311F29;
+ color:#fff;
+ font-size:12px;
+ font-weight:800;
+ letter-spacing:.12em;
+ text-align:center;
+ line-height:1.2;
+ box-shadow:0 7px 20px rgba(25,14,21,.17);
+ transition:background-color .23s,color .23s,transform .23s;
+}
+body.home .atelier-hero__button:hover,
+body.home .atelier-hero__button:focus-visible{
+ background:#782E45;
+ color:#fff;
+ transform:translateY(-2px);
+}
+body.home .atelier-hero__shade{
+ background:linear-gradient(90deg,rgba(24,17,21,.34),rgba(24,17,21,.46) 50%,rgba(24,17,21,.28)),
+ linear-gradient(0deg,rgba(19,15,19,.33),transparent 31%);
+}
+@media(max-width:1050px){
+ .atelier-announcement__row{gap:13px}
+ .atelier-announcement__note{font-size:9px}
+ .atelier-announcement__promo{font-size:11px;gap:9px}
+ .atelier-announcement__promo span{font-size:10px}
+}
+@media(max-width:760px){
+ .atelier-announcement__row{
+  grid-template-columns:minmax(0,1fr);
+  min-height:50px;
+  gap:0;
+  justify-items:center;
+ }
+ .atelier-announcement__note,.atelier-announcement__row>a{display:none}
+ .atelier-announcement__promo{font-size:11px;gap:10px}
+ /* Legacy mobile rule hides first-child spans; keep the promo-code badge visible. */
+ .atelier-announcement__promo span:first-child{display:inline-block}
+ body.home .atelier-hero__copy{padding:84px 0 56px}
+ body.home .atelier-hero h1{font-size:clamp(48px,9.5vw,70px)}
+}
+@media(max-width:650px){
+ body.home .atelier-hero__layout{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:475px;
+ }
+ body.home .atelier-hero__copy{padding:68px 0 40px}
+ body.home .atelier-hero h1{font-size:clamp(43px,10.5vw,57px);max-width:340px;line-height:1.07}
+ body.home .atelier-hero__copy>p:not(.atelier-hero__eyebrow){
+  max-width:295px;
+  font-size:13px;
+  line-height:1.6;
+  margin-bottom:23px;
+ }
+ body.home .atelier-hero__button{min-width:179px;min-height:49px;padding:14px 26px;font-size:11px}
+}
+@media(max-width:375px){
+ .atelier-announcement__row{min-height:54px}
+ .atelier-announcement__promo{gap:7px;font-size:10px;letter-spacing:.02em}
+ .atelier-announcement__promo span{padding:6px 7px;font-size:9px}
+ body.home .atelier-hero h1{font-size:41px}
+ body.home .atelier-hero__layout{min-height:430px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.home .atelier-hero__button{transition:none}
+}

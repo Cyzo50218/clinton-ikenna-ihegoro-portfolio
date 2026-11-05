@@ -1,0 +1,75 @@
+/* FORMA 1.3.6 — understated promotion typography and fashion 2026 hero. */
+.atelier-announcement__row{
+ min-height:43px;
+ padding-top:9px;
+ padding-bottom:5px;
+}
+.atelier-announcement__note{
+ font-size:8px;
+ font-weight:400;
+ letter-spacing:.035em;
+}
+.atelier-announcement__promo{
+ font-size:8.5px;
+ font-weight:450;
+ letter-spacing:.02em;
+ gap:9px;
+ transform:translateY(3px);
+}
+.atelier-announcement__promo span{
+ font-size:8px;
+ font-weight:500;
+ letter-spacing:.01em;
+ padding:4px 7px;
+}
+.atelier-announcement__row>a{
+ font-size:8px;
+ font-weight:450;
+ letter-spacing:.025em;
+ transform:translateY(3px);
+}
+body.home .atelier-hero h1{
+ max-width:900px;
+ font-size:clamp(54px,5.7vw,84px);
+ line-height:1.08;
+ margin-bottom:28px;
+}
+@media(max-width:760px){
+ .atelier-announcement__row{
+  min-height:43px;
+  padding-top:9px;
+  padding-bottom:5px;
+ }
+ .atelier-announcement__promo{
+  font-size:8.5px;
+  font-weight:450;
+  letter-spacing:.01em;
+  gap:7px;
+ }
+ .atelier-announcement__promo span{
+  font-size:8px;
+  font-weight:500;
+  padding:4px 7px;
+ }
+}
+@media(max-width:650px){
+ body.home .atelier-hero h1{
+  font-size:clamp(37px,8.7vw,49px);
+  max-width:calc(100vw - 36px);
+  line-height:1.1;
+  margin-bottom:26px;
+ }
+}
+@media(max-width:375px){
+ .atelier-announcement__promo{
+  font-size:8px;
+  font-weight:450;
+  gap:6px;
+ }
+ .atelier-announcement__promo span{
+  font-size:7.5px;
+  font-weight:500;
+  padding:4px 6px;
+ }
+ body.home .atelier-hero h1{font-size:36px}
+}
